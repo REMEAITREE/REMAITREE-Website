@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+.cover {
+    background-color: #1b3a91;
+    border-bottom-left-radius: 3rem 3rem;
+    border-bottom-right-radius: 3rem 4rem;
+}
+
+.top {
+    background-color: #1b3a91;
+    display: flex;
+    border-bottom-left-radius: 3rem 3rem;
+    border-bottom-right-radius: 3rem 4rem;
+}
+
+.heading {
+    color: aliceblue;
+    font-family: 'Tilt Neon', cursive;
+
+    font-size: 4vh;
+    padding-left: 2vw;
+    font-weight: bolder;
+}
+
+.heading2 {
+    font-family: 'Tilt Neon', cursive;
+    color: #245bba;
+    font-size: 4vh;
+    padding-left: 2vw;
+    font-weight: bolder;
+}
+
+.heading3 {
+    font-family: 'Tilt Neon', cursive;
+    text-align: center;
+    font-size: 3vh;
+    padding-left: 2vw;
+    font-weight: bolder;
+    color: aqua;
+    margin-left: 8vh;
+}
+
+.recommeded {
+    color: #245bba;
+}
+
+.advise {
+
+    background-color: #181C34;
+    border-radius: 2rem;
+    padding: 4%;
+}
+
+/* .txt {
+    font-family: 'Tilt Neon', cursive;
+
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+} */
+.txt h3{
+    color: #fff;
+    font-family: 'Tilt Neon', cursive;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    
+    white-space: nowrap; 
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(10, end),
+      blink-caret .5s step-end 5s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }

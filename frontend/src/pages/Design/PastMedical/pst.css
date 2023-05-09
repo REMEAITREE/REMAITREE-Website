@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+.pstpar{
+    background-color: aliceblue;
+    min-height: 90vh;
+}
+.heading{
+    font-family: 'Tilt Neon', cursive; 
+    font-size: 3.5vh;
+    padding-left: 2vw;
+    font-weight: bolder;
+}
+.btn{
+    margin-top: 70vh;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width:20vw;
+    height: 10vh;
+    font-size: 2.5vh;
+    color: white;
+    border-radius: 3rem;
+    background-color: #063970;
+    font-family: 'Poppins', sans-serif;
+}

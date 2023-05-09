@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+.parent{
+    position: relative;
+}
+/* .box{
+    display: flex;
+    margin-bottom: 5vh;
+    height: 5vh;
+    background-color: #B9F5D0;
+} */
+.You_msg{
+    display: flex;
+    margin-bottom: 2vh;
+    border-radius: 3rem;
+
+}
+.sender_msg{
+    display: flex;
+    margin-bottom: 2vh;
+    border-radius: 3rem;
+
+}
+
+.msg{
+background-color: #BEE3F8;
+    width: 90%;
+    margin-left: 2%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    padding-left: 3vh;
+    border-radius: 1rem;
+    
+}
+.msgd{
+background-color: #B9F5D0;
+    width: 90%;
+    margin-left: 10%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    padding-left: 3vh;
+    border-radius: 1rem;
+    
+}
+.msg_header{
+    font-size: 2vh;
+    display: block;
+    font-weight: bolder;
+    color: rgb(16, 138, 97);   
+}
+
+  .msg:before{
+    content: "";
+    position: absolute;
+    left:45px;
+    top: 0%;
+    border-width: 20px;
+    border-style: solid;
+    border-color: #BEE3F8 transparent transparent transparent;
+  
+   }
+  .msgd:before{
+    content: "";
+  position: absolute;
+  right:-20px;
+  top: 0%;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #B9F5D0 transparent transparent transparent;
+
+  
+   }
+
+  
