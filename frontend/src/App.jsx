@@ -8,6 +8,7 @@ const AuthRoutes = lazy(() => import("./pages/auth/AuthRoutes"));
 
 // Components
 import Loader from "./components/Loader";
+// import DesignRoutes from "./pages/Design/DesignRoutes";
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <HomeRoutes />
         <AuthRoutes />
+        {/* <DesignRoutes/> */}
+        {/* adasad */}
       </Suspense>
     </BrowserRouter>
   );
