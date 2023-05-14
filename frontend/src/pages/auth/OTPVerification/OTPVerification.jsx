@@ -1,8 +1,27 @@
+// Packages
+import { useLocation, useNavigate } from "react-router-dom";
+
 // Page components
 import InputBox from "./InputBox";
 import SubmitButton from "../SubmitButton";
 
+// Hooks
+import useUserContext from "../../../hooks/useUserContext";
+
+// Request handlers
+import {
+  addPatientBasicInfo,
+  addDoctorBasicInfo,
+  isUserPatient,
+} from "../../../api/FirestoreUserRequests";
+
 export default function OTPVerification() {
+  const navigate = useNavigate();
+
+  const { authType, userData } = useLocation().state;
+
+  const { setCurrentUser } = useUserContext();
+
   const verifyOTP = (e) => {
     e.preventDefault();
 
@@ -15,14 +34,35 @@ export default function OTPVerification() {
     confirmationResult
       .confirm(otp)
       .then((result) => {
-        console.log(result);
+        switch (authType) {
+          case "signin":
+            setCurrentUser({
+              ...result.user,
+              isPatient: isUserPatient(result.user.uid),
+            });
+            break;
+
+          case "patient":
+            setCurrentUser({ ...result.user, isPatient: true });
+            addPatientBasicInfo(userData);
+            break;
+
+          case "doctor":
+            setCurrentUser({ ...result.user, isPatient: false });
+            addDoctorBasicInfo(userData);
+            break;
+
+          default:
+            break;
+        }
+        navigate("/dashboard");
       })
       .catch((err) => console.error(err));
   };
 
   return (
     <form
-      className="flex flex-col justify-center items-center gap-10"
+      className="flex flex-col justify-center items-center gap-10 mt-20"
       onSubmit={verifyOTP}
       autoComplete="off"
     >

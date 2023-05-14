@@ -1,6 +1,6 @@
 // Packages
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { signInWithPhoneNumber } from "firebase/auth";
 
 import { auth } from "../../../firebase/firebase";
@@ -17,6 +17,8 @@ export default function SignIn() {
   const navigate = useNavigate();
   const [recaptchaAvailable, setRecaptchaAvailable] = useState(false);
 
+  console.log(auth.currentUser);
+
   useEffect(() => {
     generateRecaptchaVerifier();
     //* Show captcha component
@@ -32,6 +34,7 @@ export default function SignIn() {
       });
 
     return () => {
+      recaptchaVerifier.clear();
       window.recaptchaVerifier = null;
       window.recaptchaWidgetID = null;
     };
@@ -50,10 +53,11 @@ export default function SignIn() {
     if (recaptchaResponse) {
       phone = "+91" + phone;
       const appVerifier = window.recaptchaVerifier;
+      //* Send OTP to user contact
       signInWithPhoneNumber(auth, phone, appVerifier)
         .then((confirmationResult) => {
           window.confirmationResult = confirmationResult;
-          navigate("/auth/otp");
+          navigate("/auth/otp", { state: { authType: "signin" } });
         })
         .catch((err) => {
           console.error(err);
@@ -62,7 +66,9 @@ export default function SignIn() {
     }
   };
 
-  return (
+  return auth.currentUser ? (
+    <Navigate to="/dashboard" replace />
+  ) : (
     <form
       className="flex flex-col justify-between items-center gap-7"
       onSubmit={signInHandler}
