@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto&display=swap');
+.parent{
+    
+    background-color: #f8fcff;
+    min-height: 70vh;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    position: relative;
+}
+
+.title{
+    margin-left: 30%;
+    display: flex;
+    gap:1rem;
+}
+.heading{
+    color:#232948;
+    font-size: 4vh;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+}
+.ssubtext{
+    color:#232948;
+    font-size: 4vh;
+    font-family: 'Kanit', sans-serif;
+    font-weight: lighter;
+}
+
+.timer{
+    display: flex;
+    gap:0.3rem;
+    margin-left: 40%;
+
+}
+.digits{
+    background-color: #232948;
+    color: white;
+    font-size: 3vh;
+    height: 5vh;
+    width: 2vw;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+.qr{
+    height: 50vh;
+    width: 25vw;
+ background-image: url("./frame.jpg");
+ background-repeat: no-repeat;
+    margin-left:60% ;
+    background-size: contain;
+}
+.footer{
+    height: 40vh;
+    width: 40vw;
+ background-image: url("./footer.jpg");
+ background-repeat: no-repeat;
+    margin-left:40% ;
+}
