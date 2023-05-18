@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header {
+  background-color: rgba(192, 192, 192, 0.375);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  filter: blur(10%);
+  float: right;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.topic1 {
+  position: relative;
+  left: 30px;
+  font-size: 2rem;
+}
+
+.topic2 {
+  position: relative;
+  font-size: 2rem;
+  left: 30px;
+  color: rgb(201, 31, 31);
+}
+
+.topic3 {
+  position: relative;
+  font-size: 2rem;
+  left: 30px;
+  color: rgb(6, 99, 33);
+}
+
+.search {
+  position: relative;
+  left: 100px;
+  border-radius:"4rem";
+}
+
+.nav1 {
+  position: absolute;
+  top: 0px;
+  left: 64.5vw;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.nav1 ul {
+  display: flex;
+  list-style: none;
+  width: 450px;
+  height: 35px;
+  background: rgb(26, 83, 163);
+  background: linear-gradient(0deg, rgba(26, 83, 163, 1) 38%, rgba(0, 212, 255, 1) 100%, rgba(34, 70, 148, 1) 100%);
+  clip-path: polygon(10% 5%, 100% 0%, 100% 100%, 0% 100%);
+  
+}
+
+.nav1 button {
+  border: none;
+  background-color: rgba(70, 227, 219, 0);
+
+  text-decoration: none;
+  position: relative;
+
+  left: 30px;
+  bottom: 14px;
+  margin: 10px 10px;
+  padding: 10px;
+
+  color: white;
+  font-size: 1rem;
+
+
+}
+
+
+.nav1 ul li button:hover {
+
+  color:black;
+  background-color: rgba(211, 234, 245, 0.025);
+
+}
+
+.nav2 {
+  position: absolute;
+  top: 40px;
+  font-family: 'Nunito Sans', sans-serif;
+  right: 0;
+
+}
+
+.nav2 ul {
+  display: flex;
+  top: 50px;
+  padding: auto;
+  list-style: none;
+}
+
+.nav2 button {
+  color: inherit;
+  gap:0.4rem;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: rgb(155, 239, 232);
+  margin-left: 35px;
+  margin-right: 10px;
+  font-size: 1rem;
+
+}
+
+.nav2 button:hover {
+  color: rgb(9, 9, 71);
+
+}
+
+.line {
+  border-left: 1px solid rgb(148, 183, 199);
+  height: 25px;
+}

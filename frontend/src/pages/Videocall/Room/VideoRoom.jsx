@@ -5,7 +5,7 @@ import { BsFillMicFill, BsFillMicMuteFill, BsFillCameraVideoOffFill, BsCameraVid
 import { MdCall } from "react-icons/md";
 import "./videoroom.css"
 const APP_ID = "ba8d0a41ed5f4f699bc5066a9348f1b0";
-const TOKEN = "007eJxTYGjhu3C+6uctC/uk1zkcBQGZK/TlXZb6+y1dqWtqJsS5dqkCQ1KiRYpBoolhaoppmkmamaVlUrKpgZlZoqWxiUWaYZKB2JTUlIZARoayzJtMjAwQCOKzMOQmZuYxMAAAyAsdYA==";
+const TOKEN = "007eJxTYLCYpb/yzWa5S1Ehotc2h656w/pr1o6uv3O/ac4Tevuy0ihBgSEp0SLFINHEMDXFNM0kzczSMinZ1MDMLNHS2MQizTDJwL4iLaUhkJHhzu8lrIwMEAjiszDkJmbmMTAAAAD3Ihs=";
 const CHANNEL = "main";
 const client = AgoraRTC.createClient({
     mode: 'rtc',
