@@ -19,17 +19,24 @@ import { Input } from '@chakra-ui/react';
 import axios from 'axios';
 import { BiArrowBack } from "react-icons/bi";
 import Transcript from './Transcript/Transcript';
+import { MdOutlineTranscribe } from "react-icons/md";
 import {
     Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton
 } from '@chakra-ui/react'
 import { useClipboard } from '@chakra-ui/react'
+import { useNavigate } from "react-router-dom";
+
 const Design = () => {
+    const navigate = useNavigate();
     const [hover, setHover] = useState(4);
     const placeholder = "http://localhost:3010/design";
     const { onCopy, value, setValue, hasCopied } = useClipboard("");
 
     const changemode = (i) => {
         setHover(i);
+    }
+    const homeHandler=()=>{
+        navigate("/");
     }
     const [joined, setJoined] = useState(false);
     const [newmsg, setNew] = useState("");
@@ -184,7 +191,7 @@ const Design = () => {
                             border='2px solid #0658FD'
                         />{' '}
                     </div>
-                    <div className={st.navicon}><AiOutlineSetting size="35px" color="#7E8DF1"></AiOutlineSetting></div>
+                    <div className={st.navicon} onClick={homeHandler}><FiHome color='#7E8DF1' size="25px"></FiHome></div>
                     <hr id={st["hr"]}></hr>
                     <br></br>
                     <br></br>
@@ -196,9 +203,9 @@ const Design = () => {
                             <div className={st.hoverborder_1} onClick={() => changemode(1)}> <item className={st.item} id={st["i_1"]}><TbReportAnalytics color='#7E8DF1' size="25px"></TbReportAnalytics></item></div>
                         }
                         {hover === 2 ?
-                            <div className={st.hoverborder_2t} onClick={() => changemode(2)}> <item className={st.item} id={st["i_2"]}><FiHome color='#7E8DF1' size="25px"></FiHome></item></div>
+                            <div className={st.hoverborder_2t} onClick={() => changemode(2)}> <item className={st.item} id={st["i_2"]}><MdOutlineTranscribe color='#7E8DF1' size="25px"></MdOutlineTranscribe></item></div>
                             :
-                            <div className={st.hoverborder_2} onClick={() => changemode(2)}> <item className={st.item} id={st["i_2"]}><FiHome color='#7E8DF1' size="25px"></FiHome></item></div>
+                            <div className={st.hoverborder_2} onClick={() => changemode(2)}> <item className={st.item} id={st["i_2"]}><MdOutlineTranscribe color='#7E8DF1' size="25px"></MdOutlineTranscribe></item></div>
                         }
 
                         {hover === 3 ?

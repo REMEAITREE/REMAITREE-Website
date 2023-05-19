@@ -1,8 +1,11 @@
 import "./docpage.css"
 import data from "./Data.json"
 import  img from "./../../assets/pictures/profile.jpeg"
+import Navbar from '../Navbar/Navbar';
 export  default function DocPage(){
     return(
+        <>
+        <Navbar></Navbar>
         <section className="docpage">
             {data.map((Data)=>(
 
@@ -30,5 +33,6 @@ export  default function DocPage(){
             
             
         </section>
+        </>
     );
 }

@@ -4,13 +4,20 @@ import st from './pst.module.css';
 import { FiUploadCloud } from "react-icons/fi";
 import { Box } from '@chakra-ui/react'
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton,Input } from '@chakra-ui/react'
+import UploadForm from '../../reports/patient_reports_page/UploadedPdfsSection/UploadForm'
+import { useNavigate } from "react-router-dom";
 const Past = () => {
+    const navigate = useNavigate();
     const [selectedFile, setSelectedFile] = useState();
     const [isFilePicked, setIsFilePicked] = useState(false);
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const uploaddocs=()=>{
+        
+        navigate('/reports');
+    }
     return (
         <div className={st.pstpar}>
-            <button onClick={onOpen}>
+            <button onClick={uploaddocs}>
                 <div className={st.box}>
                     <FiUploadCloud size={"10vh"} color={"#6799FF"}></FiUploadCloud>
                     <div className={st.imgheading}>Upload a document</div>
@@ -19,24 +26,6 @@ const Past = () => {
                     </div>
                 </div>
             </button>
-            {/* Modal for upload */}
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Upload File </ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody alignItems={"center"}>
-                        <Input type="file" name="file" />
-                    </ModalBody>
-
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
         </div>
     )
 }
