@@ -13,7 +13,7 @@ const Payment = () => {
     const [hdig, setH] = useState(4);
     const [thdig, setTh] = useState(0);
     const SuccessPayment=()=>{
-
+        navigate("/succ_pay");
     }
     useEffect(() => {
         const interval = setInterval(() => {
@@ -57,9 +57,9 @@ const Payment = () => {
                     <div className={st.digits}>{odig}</div>
                 </div>
                 <br></br>
-                <Box boxSize='sm'>
+                <Box boxSize='sm' onClick={SuccessPayment}>
                     <div className={st.qr}></div>
-                    <div className={st.footer}></div>
+                    <div className={st.footer} ></div>
                 </Box>
                 {/* <Button onclick={SuccessPayment}></Button> */}
             </div>
