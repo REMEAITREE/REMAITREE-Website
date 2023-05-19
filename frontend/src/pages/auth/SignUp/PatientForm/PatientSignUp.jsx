@@ -69,11 +69,11 @@ export default function PatientForm() {
 
   return (
     <form
-      className="flex flex-col justify-between items-center gap-5 md:gap-7"
+      className="flex flex-col justify-between items-center gap-5 md:gap-7 mb-5"
       autoComplete="off"
       onSubmit={signUpHandler}
     >
-      <h2 className="text-2xl font-bold my-5">Sign Up as a patient</h2>
+      <h2 className="text-2xl font-bold">Sign Up as a patient</h2>
 
       <InputField
         type="text"
@@ -88,7 +88,23 @@ export default function PatientForm() {
         pattern="[0-9]{10}"
         required
       />
-      <DateSelector text="Date of birth" name="dob" />
+
+      <InputField
+        type="text"
+        name="bloodGroup"
+        placeholder="Enter blood group"
+        required
+      />
+
+      <InputField type="text" name="height" placeholder="Enter height(in cm)" />
+      <InputField type="text" name="weight" placeholder="Enter weight(in kg)" />
+
+      <InputField
+        type="text"
+        name="age"
+        placeholder="Enter your age"
+        pattern="[0-9]*"
+      />
 
       <div id="recaptcha-container"></div>
 

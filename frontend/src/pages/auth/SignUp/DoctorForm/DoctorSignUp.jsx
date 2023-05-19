@@ -11,7 +11,6 @@ import { generateRecaptchaVerifier } from "../../../../utils/recaptcha";
 // Page components
 import InputField from "../../InputField";
 import SubmitButton from "../../SubmitButton";
-import DateSelector from "../DateSelector";
 
 export default function DoctorForm() {
   const navigate = useNavigate();
@@ -69,11 +68,11 @@ export default function DoctorForm() {
 
   return (
     <form
-      className="flex flex-col justify-between items-center gap-5 md:gap-7"
+      className="flex flex-col justify-between items-center gap-5 md:gap-7 mb-5"
       autoComplete="off"
       onSubmit={signUpHandler}
     >
-      <h2 className="text-2xl font-bold my-5">Sign Up as a doctor</h2>
+      <h2 className="text-2xl font-bold">Sign Up as a doctor</h2>
 
       <InputField
         type="text"
@@ -95,7 +94,39 @@ export default function DoctorForm() {
         pattern="[0-9]*"
         required
       />
-      <DateSelector text="Date of registration?" name="registrationDate" />
+
+      <InputField
+        type="text"
+        name="currentDesignation"
+        placeholder="Enter current designation"
+        required
+      />
+      <InputField
+        type="text"
+        name="specialization"
+        placeholder="Enter your specialization"
+        required
+      />
+      <InputField
+        type="text"
+        name="yoe"
+        placeholder="Practicing for?(years)"
+        pattern="[0-9]*"
+        required
+      />
+      <InputField
+        type="text"
+        name="avgCharges"
+        placeholder="Average consulting charges(in Rs.)"
+        pattern="[0-9]*"
+        required
+      />
+      <InputField
+        type="text"
+        name="currentOrganization"
+        placeholder="Currently practicing organization"
+        required
+      />
 
       <div id="recaptcha-container"></div>
 

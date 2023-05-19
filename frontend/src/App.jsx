@@ -36,9 +36,8 @@ export default function App() {
           <ProfileRoutes />
           <PaymentRoutes />
           <SlotRoutes />
-          <ReportsRoutes />
           <DocPageRoutes />
-          <SuccessPgRoutes/>
+          <SuccessPgRoutes />
         </UserContextProvider>
       </Suspense>
     </BrowserRouter>

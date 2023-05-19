@@ -8,7 +8,7 @@ import { isUserPatient } from "../../api/FirestoreUserRequests";
 // Hooks
 import useUserContext from "../../hooks/useUserContext";
 
-export default function Dashboard() {
+export default function ReportsPage() {
   const { currentUser } = useUserContext();
 
   return currentUser ? (

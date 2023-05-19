@@ -1,5 +1,5 @@
 // Packages
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Requests
 import { uploadReport } from "../../../../api/FirebaseStorageRequests";
@@ -23,6 +23,7 @@ export default function UploadForm(props) {
 
     if (selectedFile) {
       setShowUploadForm(!uploadReport(selectedFile));
+      setSelectedFile(null);
     }
   };
 

@@ -1,5 +1,7 @@
 // Packages
 import { useState, useEffect } from "react";
+import { query, collection, where, getDocs } from "firebase/firestore";
+import { auth, db } from "../../../../firebase/firebase";
 import { Carousel } from "@trendyol-js/react-carousel";
 
 // Page components

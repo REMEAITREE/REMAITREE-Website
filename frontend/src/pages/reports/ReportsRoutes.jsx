@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 // Page components
 import ReportsPage from "./ReportsPage";
 import PDFReportViewer from "./PDFReportViewer";
-// import GenerateAppointmentReport from "./appointment_generated_report/GenerateAppointmentReport";
 
 export default function ReportsRoutes() {
   return (

@@ -31,15 +31,13 @@ const isUserPatient = async () => {
 //* Add new user to the DB
 const addPatientBasicInfo = async (patientData) => {
   try {
-    const { name, phone, dob } = patientData;
+    const { name, phone, ...rest } = patientData;
     updateUserDisplayName(name);
     await setDoc(doc(db, "users", auth.currentUser.uid), {
       name: name,
       phone: phone,
       isPatient: true,
-      details: {
-        dob: dob,
-      },
+      details: rest,
     });
   } catch (err) {
     console.error(err);
@@ -49,16 +47,13 @@ const addPatientBasicInfo = async (patientData) => {
 //* Add new doctor to the DB
 const addDoctorBasicInfo = async (doctorData) => {
   try {
-    const { name, phone, registrationNumber, registrationDate } = doctorData;
+    const { name, phone, ...rest } = doctorData;
     updateUserDisplayName(name);
     await setDoc(doc(db, "users", auth.currentUser.uid), {
       name: name,
       phone: phone,
       isPatient: false,
-      details: {
-        registrationNumber: registrationNumber,
-        registrationDate: registrationDate,
-      },
+      details: rest,
     });
   } catch (err) {
     console.error(err);
