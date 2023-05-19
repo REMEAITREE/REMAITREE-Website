@@ -75,7 +75,7 @@ const Design = () => {
             .catch(error => {
                 console.error(error);
             });
-    }, []);
+    }, [chatList]);
     return (
         <>
             <div className={st.main}>
@@ -85,11 +85,10 @@ const Design = () => {
                     <div className={st.leftheading}>
                         <div className={st.backicpar}><div className={st.AiOutline}><h1><BiArrowBack></BiArrowBack></h1></div></div>
                         <Avatar size='md' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' borderColor={"#93b8ea"} border={"solid 4px #0658FD"} />
-                        <div className={st.videocallwith}>Video call meeting with Dr Raj</div>
+                        <div className={st.videocallwith}>Video call meeting with Dr Sudhanwa</div>
                         &nbsp;
                         <div className={st.onlinedot}> </div>
-                        <Badge backgroundColor={'#DDFBFF'} className={st.badgeo} color={"#7191D9"} >2 Online </Badge>
-                        <Badge backgroundColor={'#fbf2d6'} className={st.badgeo} color={"#b0826d"}>1 invited </Badge>
+                        <Badge backgroundColor={'#DDFBFF'} className={st.badgeo} color={"#7191D9"} >1 Online </Badge>
                         <button className={st.btnadduser} onClick={onOpen}>
                             <div className={st.adduser}>
                                 <div className={st.txtuser}>Add User </div>
