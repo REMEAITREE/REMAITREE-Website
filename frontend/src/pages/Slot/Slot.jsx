@@ -6,6 +6,7 @@ import st from './Slot.module.css';
 // import Button from '@mui/material/Button';
 
 const Slot = () => {
+  
   return (
     <div className={st.par}>
       <LeftBox className={st.left}></LeftBox>

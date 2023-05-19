@@ -18,7 +18,9 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
 import Typography from '@mui/material/Typography';  
+import { useNavigate } from "react-router-dom";
 const RightBox = () => {
+  const navigate = useNavigate();
   // For Date
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,6 +30,9 @@ const RightBox = () => {
     color: theme.palette.text.secondary,
   }));
   
+  const submitHandler=()=>{
+    navigate("/payment");
+  }
   return (
     <>
       <div className={st.par}> 
@@ -61,7 +66,7 @@ const RightBox = () => {
         <br></br>
         <div className={st.submit}>
         <Button  backgroundColor="#f71212" id={st["sos_btn"]}>SOS Emergency Booking &nbsp; <GiSiren size="5vh"></GiSiren></Button>
-        <Button variant="contained">Confirm Booking </Button>
+        <Button variant="contained" onClick={submitHandler}>Confirm Booking </Button>
         </div>
       </div>
     </> 

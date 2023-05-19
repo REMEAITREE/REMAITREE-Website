@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import st from './Transcript.module.css';
+import { Container, Text } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 const Transcript = () => {
   const [transcript, setTranscript] = useState("");
   useEffect(() => {
@@ -14,8 +17,21 @@ const Transcript = () => {
     }
   })
   return (
-    <div>
-        {transcript}
+    <div className={st.parent}>
+
+      <div className={st.header}>
+        <heading className={st.heading}>
+          Your Transcript
+        </heading>
+      </div>
+      
+      <Card className={st.container}>
+        <CardBody>
+          <Text fontSize='lg'>{transcript}</Text>
+        </CardBody>
+      </Card>
+
+
     </div>
   )
 }
