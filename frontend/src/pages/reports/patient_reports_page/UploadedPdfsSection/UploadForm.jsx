@@ -1,5 +1,5 @@
 // Packages
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Requests
 import { uploadReport } from "../../../../api/FirebaseStorageRequests";
