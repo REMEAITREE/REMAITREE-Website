@@ -104,6 +104,7 @@ font-size: 9px;
 .model-card-button:hover{
     
     background-color: rgb(26, 110, 147);
+    color: aliceblue;
 }
 .model-card-button1{
     position: relative;
@@ -116,5 +117,6 @@ font-size: 9px;
 .model-card-button1:hover{
     
     background-color: rgb(220, 40, 9);
+    color: aliceblue;
 }
 
