@@ -1,10 +1,13 @@
 #model-page{
   
-   width: 100%;
-   height: 100%;
+   width: 100vw;
+   height: 400vh;
 
-    background-color: rgb(46, 28, 65); 
-    background: linear-gradient(180deg, rgba(239,245,246,1) 2%, rgba(208,227,231,1) 59%, rgba(138,218,235,1) 100%, rgba(34,70,148,1) 100%);
+   background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(74,74,129,1) 33%, rgba(0,212,255,1) 100%);
+   
+   
+
 
 }
 .model-card{
@@ -90,7 +93,7 @@ font-size: 9px;
     top: 30px;
     text-align: center;
 }
-.model-card button{
+.model-card-button{
     position: relative;
     top: 70px;
     border: solid 2px gray;
@@ -98,9 +101,20 @@ font-size: 9px;
     left: 39px;
     padding: 10px;
 }
-.model-card button:hover{
+.model-card-button:hover{
     
-    background-color: aqua;
+    background-color: rgb(26, 110, 147);
 }
-
+.model-card-button1{
+    position: relative;
+    top: 70px;
+    border: solid 2px gray;
+    border-radius: 10%;
+    left: 39px;
+    padding: 10px;
+}
+.model-card-button1:hover{
+    
+    background-color: rgb(220, 40, 9);
+}
 
