@@ -10,6 +10,9 @@ const ReportsRoutes = lazy(() => import("./pages/reports/ReportsRoutes"))
 const DesignRoutes = lazy(() => import("./pages/Design/DesignRoutes"));
 const PaymentRoutes=lazy(()=>import("./pages/Payment/PaymentRoutes"))
 const SlotRoutes=lazy(()=>import("./pages/Slot/SlotRoutes"))
+const ProfileRoutes = lazy(() => import("./pages/profilepage/ProfileRoutes"));
+const ModelRoutes= lazy(() => import("./pages/modelpage/ModelRoutes"));
+const AboutRoutes= lazy(() => import("./pages/aboutus/AboutRoutes"));
 // Components
 import Loader from "./components/Loader";
 
@@ -27,6 +30,9 @@ export default function App() {
           <DashboardRoutes />
           <ReportsRoutes />
           <DesignRoutes />
+          <ModelRoutes/>
+          <AboutRoutes/>
+          <ProfileRoutes/>
           <PaymentRoutes/>
           <SlotRoutes/>
         </UserContextProvider>

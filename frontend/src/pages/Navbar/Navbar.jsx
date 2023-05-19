@@ -119,7 +119,7 @@ return(
             <button  onClick={() => (window.location = "/auth/signup")}><PersonAddIcon/>Sign Up</button>
           </li>
           <li>
-            <button><InfoIcon/>About us</button>
+            <button onClick={() => (window.location = "/about")}><InfoIcon/>About us</button>
           </li>
           <div className="line"></div>
           <li>
