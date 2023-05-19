@@ -92,13 +92,15 @@ export default function Navbar() {
               </button>
             </li>
             <li>
-              <button>MyReport</button>
+              <button onClick={() => (window.location = "/reports")}>
+                MyReport
+              </button>
             </li>
             <li>
               <button>Research</button>
             </li>
             <li>
-              <button>ContactUs</button>
+              <button>Contact Us</button>
             </li>
           </ul>
         </div>
