@@ -67,7 +67,7 @@ export default function SignIn() {
   };
 
   return auth.currentUser ? (
-    <Navigate to="/dashboard" replace />
+    <Navigate to="/" replace />
   ) : (
     <form
       className="flex flex-col justify-between items-center gap-7"

@@ -10,6 +10,7 @@ export default {
       secondary: "#5E958D",
       accent: "#DAC185",
       gray: "#FBFCFD",
+      red: "#E64242",
     },
     fontFamily: {
       main: ["Montserrat", "sans-serif"],

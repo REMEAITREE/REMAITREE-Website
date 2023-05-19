@@ -6,14 +6,15 @@ import { BrowserRouter } from "react-router-dom";
 import HomeRoutes from "./pages/home/HomeRoutes";
 const AuthRoutes = lazy(() => import("./pages/auth/AuthRoutes"));
 const DashboardRoutes = lazy(() => import("./pages/dashboard/DashboardRoutes"));
-const ReportsRoutes = lazy(() => import("./pages/reports/ReportsRoutes"))
-const DesignRoutes =lazy(()=>import("./pages/Design/DesignRoutes"));
+const ReportsRoutes = lazy(() => import("./pages/reports/ReportsRoutes"));
+const DesignRoutes = lazy(() => import("./pages/Design/DesignRoutes"));
+const DocPageRoutes = lazy(() => import("./pages/finddoctor/DoctorPgRoutes"));
+
 // Components
 import Loader from "./components/Loader";
 
 // Context Providers
 import { UserContextProvider } from "./contexts/UserContext";
-
 
 export default function App() {
   return (
@@ -24,7 +25,8 @@ export default function App() {
           <AuthRoutes />
           <DashboardRoutes />
           <ReportsRoutes />
-          <DesignRoutes/>
+          <DesignRoutes />
+          <DocPageRoutes />
         </UserContextProvider>
       </Suspense>
     </BrowserRouter>

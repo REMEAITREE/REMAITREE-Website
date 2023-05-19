@@ -14,7 +14,7 @@ export default function SignUp() {
   const [isPatientForm, setIsPatientForm] = useState(false);
 
   return auth.currentUser ? (
-    <Navigate to="/dashboard" replace />
+    <Navigate to="/" replace />
   ) : showFormSelector ? (
     <FormSelector
       setIsPatientForm={setIsPatientForm}

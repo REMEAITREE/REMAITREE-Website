@@ -1,3 +1,7 @@
 export default function PatientReportsPage() {
-  return <h1>Patient reports page</h1>;
+  return (
+    <>
+      <h1 className="text-center">Remaitree</h1>
+    </>
+  );
 }
