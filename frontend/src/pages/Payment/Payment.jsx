@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react'
 import st from './Payment.module.css'
 import { Image } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
+import { useNavigate } from "react-router-dom";
 const Payment = () => {
     const [running, setRunning] = useState(true);
+    const navigate = useNavigate();
     const [seconds, setSeconds] = useState(59);
     const [minutes, setMinutes] = useState(4);
     const [odig, setOdig] = useState(9);
     const [tdig, setTdig] = useState(5);
     const [hdig, setH] = useState(4);
     const [thdig, setTh] = useState(0);
+    const SuccessPayment=()=>{
+
+    }
     useEffect(() => {
         const interval = setInterval(() => {
             if (minutes === 0 && seconds === 0) {
@@ -55,8 +60,8 @@ const Payment = () => {
                 <Box boxSize='sm'>
                     <div className={st.qr}></div>
                     <div className={st.footer}></div>
-
                 </Box>
+                {/* <Button onclick={SuccessPayment}></Button> */}
             </div>
         </>
     )

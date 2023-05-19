@@ -19,6 +19,7 @@ import Loader from "./components/Loader";
 
 // Context Providers
 import { UserContextProvider } from "./contexts/UserContext";
+import SuccessPgRoutes from "./pages/Payment/SuccessPg/SuccessPgRoutes";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           <SlotRoutes />
           <ReportsRoutes />
           <DocPageRoutes />
+          <SuccessPgRoutes/>
         </UserContextProvider>
       </Suspense>
     </BrowserRouter>
