@@ -1,7 +1,6 @@
 // Packages
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Payment from "../../frontend/src/pages/Payment/Payment";
+import { BrowserRouter } from "react-router-dom";
 // Route components
 import HomeRoutes from "./pages/home/HomeRoutes";
 const AuthRoutes = lazy(() => import("./pages/auth/AuthRoutes"));
@@ -13,6 +12,8 @@ const SlotRoutes = lazy(() => import("./pages/Slot/SlotRoutes"));
 const ProfileRoutes = lazy(() => import("./pages/profilepage/ProfileRoutes"));
 const ModelRoutes = lazy(() => import("./pages/modelpage/ModelRoutes"));
 const AboutRoutes = lazy(() => import("./pages/aboutus/AboutRoutes"));
+const DocPageRoutes = lazy(() => import("./pages/finddoctor/DoctorPgRoutes"));
+
 // Components
 import Loader from "./components/Loader";
 
@@ -34,6 +35,8 @@ export default function App() {
           <ProfileRoutes />
           <PaymentRoutes />
           <SlotRoutes />
+          <ReportsRoutes />
+          <DocPageRoutes />
         </UserContextProvider>
       </Suspense>
     </BrowserRouter>

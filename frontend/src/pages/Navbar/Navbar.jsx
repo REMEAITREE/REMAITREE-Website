@@ -3,8 +3,7 @@ import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 
 import InputBase from "@mui/material/InputBase";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 // import service from "./../../Assets/icons8-jamboard.png";
 // import signup from "./../../Assets/user-add-svgrepo-com.png";
 // import aboutus from "./../../Assets/icons8-info.png";
