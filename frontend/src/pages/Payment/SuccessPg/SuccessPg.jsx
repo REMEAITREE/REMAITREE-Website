@@ -4,12 +4,10 @@ import { Button } from '@chakra-ui/react';
 import { useClipboard, Flex, Input } from '@chakra-ui/react'
 import { Card, CardHeader, CardBody, CardFooter, Heading } from '@chakra-ui/react'
 const SuccessPg = () => {
-    const placeholder = "http://localhost:3010/design";
-    const { onCopy, value, setValue, hasCopied } = useClipboard("");
-    const copied=()=>{
-        onCopy;
-        setValue("http://localhost:3010/design");
-    }
+    const placeholder = "http://localhost:3010/conf";
+    
+    const { onCopy, value, setValue, hasCopied } = useClipboard("http://localhost:3010/conf");
+    
     return (
         <div className={st.bigpar}>
             <div className={st.card}>
@@ -30,7 +28,8 @@ const SuccessPg = () => {
                                 onChange={(e) => {
                                     setValue(e.target.value);
                                 }}
-                                mr={2}
+                                mr={4}
+                                p={3}
                             />
                             <Button onClick={onCopy} colorScheme='blue'>{hasCopied ? "Copied!" : "Copy"}</Button>
                         </Flex>

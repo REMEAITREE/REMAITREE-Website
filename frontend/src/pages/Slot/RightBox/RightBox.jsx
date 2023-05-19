@@ -65,7 +65,7 @@ const RightBox = () => {
         <br></br>
         <br></br>
         <div className={st.submit}>
-        <Button  backgroundColor="#f71212" id={st["sos_btn"]}>SOS Emergency Booking &nbsp; <GiSiren size="5vh"></GiSiren></Button>
+        <Button  backgroundColor="#f71212" id={st["sos_btn"]}  onClick={submitHandler}>SOS Emergency Booking &nbsp; <GiSiren size="5vh"></GiSiren></Button>
         <Button variant="contained" onClick={submitHandler}>Confirm Booking </Button>
         </div>
       </div>
