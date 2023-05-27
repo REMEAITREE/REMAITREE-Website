@@ -24,6 +24,7 @@ import SuccessPgRoutes from "./pages/Payment/SuccessPg/SuccessPgRoutes";
 export default function App() {
   return (
     <BrowserRouter>
+    
       <Suspense fallback={<Loader />}>
         <UserContextProvider>
           <HomeRoutes />

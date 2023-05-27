@@ -97,7 +97,7 @@ export default function Navbar() {
               </button>
             </li>
             <li>
-              <button>Research</button>
+              <button onClick={() => (window.location = "/slot")}>Book Slot</button>
             </li>
             <li>
               <button>Contact Us</button>
@@ -122,7 +122,7 @@ export default function Navbar() {
               <li>
                 <button onClick={() => (window.location = "/about")}>
                   <InfoIcon />
-                  About us
+                  About 
                 </button>
               </li>
               <div className="line"></div>

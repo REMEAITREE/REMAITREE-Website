@@ -6,7 +6,7 @@ import { Card, CardHeader, CardBody, CardFooter, Heading } from '@chakra-ui/reac
 const SuccessPg = () => {
     const placeholder = "http://localhost:3010/conf";
     
-    const { onCopy, value, setValue, hasCopied } = useClipboard("http://localhost:3010/conf");
+    const { onCopy, value, setValue, hasCopied } = useClipboard("http://127.0.0.1:5173/conf");
     
     return (
         <div className={st.bigpar}>
