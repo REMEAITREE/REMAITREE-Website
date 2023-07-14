@@ -40,6 +40,7 @@ const Design = () => {
     }
     const [joined, setJoined] = useState(false);
     const [newmsg, setNew] = useState("");
+    
     const [chatList, setChatList] = useState();
 
     // Add user btn modal
@@ -67,6 +68,8 @@ const Design = () => {
         }
     }
     useEffect(() => {
+        // Running using json server 
+    // run this line in new terminal-  json-server --watch src/pages/db.json
         axios.get('http://localhost:3000/chats')
             .then(response => {
                 setChatList(response.data);
